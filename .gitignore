@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+build/
+*.egg-info/
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+
+# Node
+node_modules/
+*.log*
+
+# Vite
+frontend/dist/
