@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
+import { apiUrl } from "./config";
 import "./App.css";
 
 function App() {
   const [message, setMessage] = useState<string>("loading...");
   useEffect(() => {
-    fetch("/api/ping/")
+    fetch(apiUrl("/api/ping/"))
       .then((r) => r.json())
       .then((data) => setMessage(data.message))
       .catch(() => setMessage("backend unreachable"));
