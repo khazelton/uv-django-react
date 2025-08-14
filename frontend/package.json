@@ -1,3 +1,34 @@
+# React Frontend Package Configuration
+# This file defines the Node.js project configuration for the React frontend
+# 
+# PROJECT OVERVIEW:
+# - React 19 frontend with TypeScript support
+# - Built with Vite for fast development and building
+# - Communicates with Django backend via API calls
+# - Uses modern React features and hooks
+#
+# CONNECTIONS:
+# - Backend: Django API at http://localhost:8000
+# - Build Tool: Vite for development and production builds
+# - Package Manager: npm (package-lock.json)
+# - TypeScript: Type checking and compilation
+#
+# SCRIPTS:
+# - dev: Start Vite development server with hot reload
+# - build: Compile TypeScript and build for production
+# - lint: Run ESLint for code quality checks
+# - preview: Preview production build locally
+#
+# DEPENDENCIES:
+# - react/react-dom: Core React library (v19)
+# - axios: HTTP client for API calls (currently unused, using fetch)
+#
+# DEV DEPENDENCIES:
+# - TypeScript: Type checking and compilation
+# - Vite: Build tool and dev server
+# - ESLint: Code linting and quality
+# - React types: TypeScript definitions for React
+
 {
   "name": "frontend",
   "private": true,

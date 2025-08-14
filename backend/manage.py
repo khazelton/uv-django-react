@@ -1,5 +1,23 @@
 #!/usr/bin/env python
-"""Django's command-line utility for administrative tasks."""
+"""
+Django's command-line utility for administrative tasks.
+
+This file is Django's main entry point for running management commands like:
+- runserver: Start the development server
+- migrate: Apply database migrations
+- createsuperuser: Create admin user
+- collectstatic: Collect static files
+- shell: Open Django shell
+
+CONNECTIONS:
+- Imports: os, sys, django.core.management
+- References: config.settings (Django settings module)
+- Used by: All Django management commands
+
+USAGE:
+- cd backend && python manage.py <command>
+- cd backend && uv run python manage.py <command> (with uv)
+"""
 import os
 import sys
 

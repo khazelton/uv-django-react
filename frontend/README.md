@@ -1,4 +1,34 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite Frontend
+
+<!-- 
+  PROJECT OVERVIEW:
+  This is the frontend portion of a full-stack Django + React application.
+  The frontend is built with modern React 19, TypeScript, and Vite for fast development.
+  
+  CONNECTIONS:
+  - Backend: Django API server at http://localhost:8000
+  - API: Communicates with Django backend via /api/* endpoints
+  - Build Tool: Vite for development and production builds
+  - Package Manager: npm with package-lock.json
+  
+  ARCHITECTURE:
+  - React 19 with TypeScript for type safety
+  - Vite for fast development server and optimized builds
+  - ESLint for code quality and consistency
+  - CSS modules and global styles for styling
+  
+  DEVELOPMENT:
+  - Hot Module Replacement (HMR) for fast development
+  - TypeScript compilation and type checking
+  - ESLint rules for React and TypeScript best practices
+  - Proxy configuration for API calls to Django backend
+  
+  USAGE:
+  - Development: npm run dev (starts Vite dev server)
+  - Build: npm run build (creates production build)
+  - Lint: npm run lint (runs ESLint checks)
+  - Preview: npm run preview (serves production build)
+-->
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

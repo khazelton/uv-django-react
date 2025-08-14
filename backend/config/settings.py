@@ -8,6 +8,31 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
+
+PROJECT OVERVIEW:
+- Django 5.2.5 backend for React frontend
+- REST API with Django REST Framework
+- CORS enabled for frontend communication
+- SQLite database for development
+
+CONNECTIONS:
+- Imports: pathlib.Path
+- Referenced by: manage.py, wsgi.py, asgi.py
+- References: api app, rest_framework, corsheaders
+- Database: db.sqlite3 in backend directory
+- Frontend: localhost:5173 (Vite dev server)
+
+KEY CONFIGURATIONS:
+- CORS: Allows React frontend on ports 5173
+- REST Framework: Enabled for API endpoints
+- Debug: True (development mode)
+- Database: SQLite (development only)
+- Static Files: Standard Django static handling
+
+SECURITY NOTES:
+- SECRET_KEY: Change in production
+- DEBUG: Set to False in production
+- ALLOWED_HOSTS: ['*'] for development only
 """
 
 from pathlib import Path
@@ -38,12 +63,13 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 
-    'rest_framework',
-    'corsheaders',
-    'api',]
+    'rest_framework',  # Django REST Framework for API
+    'corsheaders',     # Handle CORS for React frontend
+    'api',             # Custom API app with endpoints
+]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',  # Must be first for CORS
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -125,4 +151,6 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+# CORS Configuration for React Frontend
+# Allows the React dev server to make requests to Django
 CORS_ALLOWED_ORIGINS = ['http://localhost:5173', 'http://127.0.0.1:5173']

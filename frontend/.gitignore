@@ -1,24 +1,51 @@
-# Logs
+# Frontend Git Ignore Configuration
+# This file specifies which files and directories should be ignored by Git
+# 
+# PROJECT OVERVIEW:
+# - Git ignore patterns for React frontend project
+# - Excludes build outputs, dependencies, and development files
+# - Keeps repository clean and focused on source code
+# - Standard patterns for Node.js and React projects
+#
+# CONNECTIONS:
+# - Used by: Git version control system
+# - Targets: Frontend-specific files and directories
+# - Related to: package.json (dependencies), build outputs
+# - Part of: Project-wide version control strategy
+#
+# IGNORED PATTERNS:
+# - Logs: All log files and debug outputs
+# - Dependencies: node_modules directory (managed by npm)
+# - Build outputs: dist, dist-ssr directories
+# - Editor files: IDE and editor-specific configurations
+# - OS files: System files like .DS_Store
+#
+# USAGE:
+# - Automatically applied by Git
+# - Can be overridden with git add -f for specific files
+# - Patterns are relative to the frontend directory
+
+# Logs - All log files and debug outputs
 logs
 *.log
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Dependencies and build outputs
+node_modules      # npm dependencies (managed by package.json)
+dist             # Production build output
+dist-ssr         # Server-side rendering build output
+*.local          # Local environment files
 
 # Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+.vscode/*         # VS Code settings (except extensions.json)
+!.vscode/extensions.json  # Keep recommended extensions
+.idea             # IntelliJ/WebStorm settings
+.DS_Store         # macOS system files
+*.suo             # Visual Studio user options
+*.ntvs*           # Visual Studio project files
+*.njsproj         # Visual Studio Node.js project
+*.sln             # Visual Studio solution files
+*.sw?             # Vim swap files

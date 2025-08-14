@@ -1,3 +1,26 @@
+# UV Project Configuration for Django Backend
+# This file defines the Python project dependencies and configuration for the Django backend
+# 
+# PROJECT OVERVIEW:
+# - Name: uv-django-react (Django backend for React frontend)
+# - Python Version: 3.13+ (uses modern Python features)
+# - Package Manager: uv (fast Python package installer)
+#
+# DEPENDENCIES:
+# - django>=5.2.5: Core Django web framework
+# - django-cors-headers>=4.7.0: Handle CORS for React frontend
+# - djangorestframework>=3.16.1: REST API framework
+#
+# CONNECTIONS:
+# - Referenced by: uv.lock (dependency lock file)
+# - Used by: uv install/uv run commands
+# - Related to: backend/requirements.txt equivalent
+#
+# USAGE:
+# - uv add <package>: Add new dependencies
+# - uv run python manage.py <command>: Run Django commands
+# - uv sync: Install dependencies from lock file
+
 [project]
 name = "uv-django-react"
 version = "0.1.0"

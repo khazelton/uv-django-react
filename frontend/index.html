@@ -1,13 +1,45 @@
 <!doctype html>
+<!-- 
+  React Application HTML Entry Point
+  This file serves as the HTML template for the React application
+  
+  PROJECT OVERVIEW:
+  - Main HTML document that loads the React application
+  - Provides the root DOM element for React to render into
+  - Sets up meta tags, viewport, and page title
+  - Loads the main TypeScript entry point
+  
+  CONNECTIONS:
+  - Root Element: <div id="root"> where React renders
+  - Entry Point: /src/main.tsx (React application bootstrap)
+  - Styling: CSS loaded through React components
+  - Build Tool: Vite processes and serves this file
+  
+  STRUCTURE:
+  - HTML5 document with proper meta tags
+  - Responsive viewport configuration
+  - Root container for React mounting
+  - Module script loading for modern browsers
+  
+  USAGE:
+  - Served by Vite development server
+  - Entry point for the entire application
+  - Can be customized for SEO, meta tags, etc.
+-->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Vite favicon (can be replaced with custom icon) -->
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!-- Responsive viewport for mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Page title (can be customized) -->
     <title>Vite + React + TS</title>
   </head>
   <body>
+    <!-- Root container where React will render the application -->
     <div id="root"></div>
+    <!-- Main application entry point - TypeScript React app -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

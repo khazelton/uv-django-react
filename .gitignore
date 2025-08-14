@@ -1,22 +1,49 @@
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-env/
-venv/
-build/
-*.egg-info/
+# Project-Wide Git Ignore Configuration
+# This file specifies which files and directories should be ignored by Git for the entire project
+# 
+# PROJECT OVERVIEW:
+# - Git ignore patterns for the full-stack Django + React project
+# - Covers both backend (Python/Django) and frontend (Node.js/React) files
+# - Excludes build outputs, dependencies, and development artifacts
+# - Keeps repository clean and focused on source code
+#
+# CONNECTIONS:
+# - Used by: Git version control system for entire project
+# - Targets: Both backend/ and frontend/ directories
+# - Related to: backend/.venv/, frontend/node_modules/, build outputs
+# - Part of: Project-wide version control strategy
+#
+# IGNORED PATTERNS:
+# - Python: Compiled files, virtual environments, build artifacts
+# - Django: Logs, local settings, database files
+# - Node.js: Dependencies, logs, build outputs
+# - Vite: Frontend build directory
+# - General: Common development and system files
+#
+# USAGE:
+# - Automatically applied by Git to all subdirectories
+# - Can be overridden with git add -f for specific files
+# - Patterns apply to the entire project structure
 
-# Django
-*.log
-local_settings.py
-db.sqlite3
+# Python Backend Files
+__pycache__/          # Python bytecode cache directories
+*.pyc                 # Compiled Python files
+*.pyo                 # Optimized Python files
+*.pyd                 # Python DLL files
+.Python               # Python installation marker
+env/                  # Virtual environment directory
+venv/                 # Alternative virtual environment name
+build/                # Python build artifacts
+*.egg-info/           # Python package metadata
 
-# Node
-node_modules/
-*.log*
+# Django Specific Files
+*.log                 # Django and application logs
+local_settings.py     # Local Django settings (not in version control)
+db.sqlite3            # SQLite database file (development only)
 
-# Vite
-frontend/dist/
+# Node.js Frontend Files
+node_modules/         # npm dependencies (managed by package.json)
+*.log*                # Node.js and npm logs
+
+# Vite Build Output
+frontend/dist/        # Frontend production build directory

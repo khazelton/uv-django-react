@@ -1,42 +1,75 @@
+/* App Component Specific Styles */
+/* This file contains styles specific to the App component */
+/* 
+PROJECT OVERVIEW:
+- Component-specific CSS for the main App component
+- Layout and styling for the application container
+- Logo animations and hover effects
+- Responsive design considerations
+- Accessibility features (reduced motion support)
+
+CONNECTIONS:
+- Imported by: App.tsx (main component)
+- Styles: #root container, logo elements, cards
+- Animations: Logo spin animation with accessibility support
+- Layout: Centered container with max-width and padding
+
+STYLE FEATURES:
+- Container Layout: Centered container with responsive max-width
+- Logo Styling: Interactive logos with hover effects
+- Animations: CSS keyframes for logo rotation
+- Accessibility: Respects user's motion preferences
+- Responsive: Adapts to different screen sizes
+*/
+
+/* Main Application Container */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  max-width: 1280px;        /* Maximum width for large screens */
+  margin: 0 auto;           /* Center horizontally */
+  padding: 2rem;            /* Consistent spacing around content */
+  text-align: center;       /* Center text content */
 }
 
+/* Logo Styling and Interactions */
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  height: 6em;              /* Large logo size */
+  padding: 1.5em;          /* Space around logo */
+  will-change: filter;      /* Optimize filter transitions */
+  transition: filter 300ms; /* Smooth filter transitions */
 }
 
+/* Logo hover effects */
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa); /* Blue glow on hover */
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa); /* React blue glow on hover */
+}
+
+/* Logo Spin Animation */
 @keyframes logo-spin {
   from {
-    transform: rotate(0deg);
+    transform: rotate(0deg);   /* Start position */
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg); /* End position (full rotation) */
   }
 }
 
+/* Accessibility: Respect user's motion preferences */
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+    animation: logo-spin infinite 20s linear; /* Continuous slow rotation */
   }
 }
 
+/* Card Component Styles */
 .card {
-  padding: 2em;
+  padding: 2em;             /* Consistent card padding */
 }
 
+/* Documentation Link Styling */
 .read-the-docs {
-  color: #888;
+  color: #888;               /* Muted text color */
 }
